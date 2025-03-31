@@ -1,0 +1,765 @@
+/* Styles généraux */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #c0392b;
+    --text-color: #333;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: var(--light-color);
+}
+
+nav ul li a.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Main content */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--light-color);
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    color: white;
+    margin: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body p {
+    margin-bottom: 0.5rem;
+}
+
+.card-body .recommendation {
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Score badge */
+.score {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.score-badge {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-small {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* CTA section */
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--light-color);
+    margin-top: 2rem;
+}
+
+.recommendation-box {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recommendation-box h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.recommendation-box ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.recommendation-box li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.recommendation-box li:before {
+    content: "✓";
+    color: var(--success-color);
+    position: absolute;
+    left: 0;
+}
+
+/* City details page */
+.city-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.city-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.city-category {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.city-summary {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.summary-item {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.summary-item .label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.summary-item .value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    background-color: var(--light-color);
+}
+
+.tab-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 1.5rem 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* SWOT Analysis */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.swot-item {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.swot-item h4 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.strengths {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-left: 4px solid var(--success-color);
+}
+
+.weaknesses {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--danger-color);
+}
+
+.opportunities {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.threats {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid var(--warning-color);
+}
+
+/* Methodology page */
+.methodology-steps {
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.context-box {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.scoring-system {
+    margin: 2rem 0;
+}
+
+.criteria {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.criteria:last-child {
+    border-bottom: none;
+}
+
+.score-interpretation {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.score-range {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.score-range:last-child {
+    border-bottom: none;
+}
+
+.score-range .range {
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* Results page */
+.ranking-table, .comparative-table, .detailed-scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.ranking-table th, .comparative-table th, .detailed-scores-table th,
+.ranking-table td, .comparative-table td, .detailed-scores-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.ranking-table th, .comparative-table th, .detailed-scores-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.ranking-table tr:hover, .comparative-table tr:hover, .detailed-scores-table tr:hover {
+    background-color: rgba(236, 240, 241, 0.5);
+}
+
+.rank-1 {
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.rank-2 {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.rank-3 {
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
+.total-row {
+    font-weight: bold;
+    background-color: var(--light-color);
+}
+
+.chart-container {
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+}
+
+.versailles .color-box {
+    background-color: rgba(54, 162, 235, 1);
+}
+
+.boulogne .color-box {
+    background-color: rgba(255, 99, 132, 1);
+}
+
+.nanterre .color-box {
+    background-color: rgba(75, 192, 192, 1);
+}
+
+.city-analysis {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.city-analysis:last-child {
+    border-bottom: none;
+}
+
+.analysis-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.strengths-column, .weaknesses-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.strengths-column h5 {
+    color: var(--success-color);
+}
+
+.weaknesses-column h5 {
+    color: var(--danger-color);
+}
+
+/* Recommendations page */
+.recommendation-card {
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.recommendation-card.primary {
+    border: 2px solid var(--secondary-color);
+}
+
+.recommendation-card.alternative {
+    border: 2px solid var(--success-color);
+}
+
+.recommendation-card.premium {
+    border: 2px solid var(--warning-color);
+}
+
+.recommendation-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.primary .recommendation-header {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.alternative .recommendation-header {
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.premium .recommendation-header {
+    background-color: rgba(243, 156, 18, 0.1);
+}
+
+.recommendation-body {
+    padding: 1.5rem;
+}
+
+.recommendation-details {
+    margin: 1.5rem 0;
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    font-weight: bold;
+    min-width: 150px;
+    margin-right: 1rem;
+}
+
+.recommendation-justification {
+    margin: 1.5rem 0;
+}
+
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.advice-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.advice-icon {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.advice-content {
+    flex: 1;
+}
+
+.final-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .city-header {
+        flex-direction: column;
+    }
+    
+    .city-summary {
+        margin-top: 2rem;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .swot-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .analysis-columns {
+        flex-direction: column;
+    }
+    
+    .final-cta {
+        flex-direction: column;
+    }
+    
+    .final-cta .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .btn, footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+}

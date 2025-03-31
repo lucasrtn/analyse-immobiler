@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats - Analyse d'investissement immobilier locatif</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Analyse d'investissement immobilier locatif</h1>
+            <p class="subtitle">Départements 92 (Hauts-de-Seine) et 78 (Yvelines)</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="methodologie.html">Méthodologie</a></li>
+                <li><a href="resultats.html" class="active">Résultats</a></li>
+                <li><a href="versailles.html">Versailles</a></li>
+                <li><a href="boulogne-billancourt.html">Boulogne-Billancourt</a></li>
+                <li><a href="nanterre.html">Nanterre</a></li>
+                <li><a href="recommandations.html">Recommandations</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <section class="results-intro">
+                <h2>Synthèse comparative des localisations</h2>
+                <p>Cette page présente une analyse comparative des villes étudiées pour l'investissement immobilier locatif, avec un focus sur les trois localisations les mieux notées selon notre système d'évaluation.</p>
+            </section>
+            
+            <section class="ranking">
+                <h3>Classement général</h3>
+                <div class="ranking-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rang</th>
+                                <th>Ville</th>
+                                <th>Score</th>
+                                <th>Catégorie</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="rank-1">
+                                <td>1</td>
+                                <td>Versailles (78)</td>
+                                <td>63/100</td>
+                                <td>Investissement correct, à considérer</td>
+                                <td><a href="versailles.html" class="btn-small">Voir</a></td>
+                            </tr>
+                            <tr class="rank-2">
+                                <td>2</td>
+                                <td>Boulogne-Billancourt (92)</td>
+                                <td>59/100</td>
+                                <td>Investissement moyen, à considérer avec précaution</td>
+                                <td><a href="boulogne-billancourt.html" class="btn-small">Voir</a></td>
+                            </tr>
+                            <tr class="rank-3">
+                                <td>3</td>
+                                <td>Nanterre (92)</td>
+                                <td>57/100</td>
+                                <td>Investissement moyen, à considérer avec précaution</td>
+                                <td><a href="nanterre.html" class="btn-small">Voir</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="comparative-analysis">
+                <h3>Tableau comparatif des indicateurs clés</h3>
+                <div class="comparative-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Indicateur</th>
+                                <th>Versailles</th>
+                                <th>Boulogne-Billancourt</th>
+                                <th>Nanterre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Prix médian au m²</strong></td>
+                                <td>6 958 €/m²</td>
+                                <td>9 059 €/m²</td>
+                                <td>6 614 €/m²</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Évolution sur 1 an</strong></td>
+                                <td>-3%</td>
+                                <td>-1%</td>
+                                <td>-1,8%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Évolution sur 5 ans</strong></td>
+                                <td>+2%</td>
+                                <td>+2%</td>
+                                <td>Stable</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prix location au m²</strong></td>
+                                <td>20 €/m²</td>
+                                <td>29 €/m²</td>
+                                <td>18 €/m²</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rentabilité locative</strong></td>
+                                <td>3,45%</td>
+                                <td>3,84%</td>
+                                <td>3,27%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temps depuis Suresnes</strong></td>
+                                <td>39 min</td>
+                                <td>31 min</td>
+                                <td>30 min</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Budget pour 40m²</strong></td>
+                                <td>278 320 €</td>
+                                <td>362 360 €</td>
+                                <td>264 560 €</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adéquation au budget</strong></td>
+                                <td>Moyenne</td>
+                                <td>Faible</td>
+                                <td>Moyenne</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Qualité de vie</strong></td>
+                                <td>Excellente</td>
+                                <td>Excellente</td>
+                                <td>Moyenne</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tension locative</strong></td>
+                                <td>Forte</td>
+                                <td>Très forte</td>
+                                <td>Forte</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="detailed-scores">
+                <h3>Détail des scores par critère</h3>
+                <div class="scores-chart">
+                    <div class="chart-container">
+                        <canvas id="scoresChart"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item versailles">
+                            <span class="color-box"></span>
+                            <span class="city-name">Versailles</span>
+                        </div>
+                        <div class="legend-item boulogne">
+                            <span class="color-box"></span>
+                            <span class="city-name">Boulogne-Billancourt</span>
+                        </div>
+                        <div class="legend-item nanterre">
+                            <span class="color-box"></span>
+                            <span class="city-name">Nanterre</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detailed-scores-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Critère</th>
+                                <th>Points max</th>
+                                <th>Versailles</th>
+                                <th>Boulogne-Billancourt</th>
+                                <th>Nanterre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Accessibilité depuis Suresnes</td>
+                                <td>20</td>
+                                <td>11</td>
+                                <td>11</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Rentabilité de l'investissement</td>
+                                <td>25</td>
+                                <td>14</td>
+                                <td>14</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>Adéquation au budget</td>
+                                <td>15</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Niveau et qualité de vie</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Dynamique du marché locatif</td>
+                                <td>15</td>
+                                <td>9</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Sécurité de l'investissement</td>
+                                <td>10</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>6</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>100</strong></td>
+                                <td><strong>63</strong></td>
+                                <td><strong>59</strong></td>
+                                <td><strong>57</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="strengths-weaknesses">
+                <h3>Analyse des forces et faiblesses principales</h3>
+                
+                <div class="city-analysis">
+                    <h4>Versailles (78)</h4>
+                    <div class="analysis-columns">
+                        <div class="strengths-column">
+                            <h5>Forces</h5>
+                            <ul>
+                                <li>Excellente qualité de vie</li>
+                                <li>Stabilité du marché immobilier</li>
+                                <li>Prix relativement accessibles par rapport aux autres villes analysées</li>
+                                <li>Demande locative soutenue</li>
+                            </ul>
+                        </div>
+                        <div class="weaknesses-column">
+                            <h5>Faiblesses</h5>
+                            <ul>
+                                <li>Accessibilité moyenne depuis Suresnes (39 min)</li>
+                                <li>Rentabilité modérée (3,45%)</li>
+                                <li>Budget légèrement supérieur aux 200 000€ initialement prévus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="city-analysis">
+                    <h4>Boulogne-Billancourt (92)</h4>
+                    <div class="analysis-columns">
+                        <div class="strengths-column">
+                            <h5>Forces</h5>
+                            <ul>
+                                <li>Excellente qualité de vie</li>
+                                <li>Forte attractivité économique</li>
+                                <li>Marché locatif dynamique</li>
+                                <li>Bonne accessibilité (31 min)</li>
+                            </ul>
+                        </div>
+                        <div class="weaknesses-column">
+                            <h5>Faiblesses</h5>
+                            <ul>
+                                <li>Prix très élevés dépassant largement le budget fixé (9 059 €/m²)</li>
+                                <li>Nécessité d'augmenter significativement le budget initial</li>
+                                <li>Fiscalité locale élevée</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="city-analysis">
+                    <h4>Nanterre (92)</h4>
+                    <div class="analysis-columns">
+                        <div class="strengths-column">
+                            <h5>Forces</h5>
+                            <ul>
+                                <li>Bonne accessibilité depuis Suresnes (30 min)</li>
+                                <li>Prix plus accessibles (6 614 €/m²)</li>
+                                <li>Proximité de La Défense</li>
+                                <li>Potentiel de développement</li>
+                            </ul>
+                        </div>
+                        <div class="weaknesses-column">
+                            <h5>Faiblesses</h5>
+                            <ul>
+                                <li>Qualité de vie moyenne</li>
+                                <li>Disparités importantes entre quartiers</li>
+                                <li>Problèmes d'insécurité dans certains secteurs</li>
+                                <li>Image contrastée de la ville</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="conclusion">
+                <h3>Conclusion de l'analyse comparative</h3>
+                <p>Cette analyse comparative des opportunités d'investissement immobilier locatif dans les départements 92 et 78 met en évidence plusieurs options viables, chacune présentant ses avantages et inconvénients.</p>
+                
+                <p><strong>Versailles</strong> se démarque comme le meilleur compromis entre qualité de vie, prix et potentiel locatif, malgré un temps de trajet légèrement plus long depuis Suresnes. Un investissement dans cette ville, particulièrement dans le quartier Montreuil, offre un bon équilibre entre rentabilité et sécurité, avec un budget légèrement supérieur aux 200 000€ initialement prévus.</p>
+                
+                <p><strong>Nanterre</strong> représente une alternative plus économique, permettant de rester plus proche du budget initial, mais nécessite une grande vigilance dans le choix de la localisation pour éviter les zones moins attractives.</p>
+                
+                <p><strong>Boulogne-Billancourt</strong>, malgré ses nombreux atouts, reste difficilement accessible avec le budget fixé, mais pourrait constituer une excellente option en cas d'augmentation significative de l'enveloppe d'investissement.</p>
+                
+                <p>Pour des recommandations détaillées sur la stratégie d'investissement à adopter, consultez la page <a href="recommandations.html">Recommandations</a>.</p>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Analyse d'investissement immobilier locatif | Données mises à jour en mars 2025</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Script pour le graphique radar des scores
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('scoresChart').getContext('2d');
+            const scoresChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Accessibilité',
+                        'Rentabilité',
+                        'Adéquation budget',
+                        'Niveau et qualité de vie',
+                        'Marché locatif',
+                        'Sécurité investissement'
+                    ],
+                    datasets: [
+                        {
+                            label: 'Versailles',
+                            data: [11, 14, 6, 15, 9, 8],
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
+                        },
+                        {
+                            label: 'Boulogne-Billancourt',
+                            data: [11, 14, 0, 15, 11, 8],
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(255, 99, 132, 1)'
+                        },
+                        {
+                            label: 'Nanterre',
+                            data: [13, 14, 6, 7, 11, 6],
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(75, 192, 192, 1)'
+                        }
+                    ]
+                },
+                options: {
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 20
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
